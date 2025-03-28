@@ -1,0 +1,14 @@
+landing_zone_id: Cyber
+application_rules:
+  - description: Firewall rules for Azure Monitor Agent and Docker registry access
+    comment: This YAML includes endpoints for Azure Monitor Agent and Docker registry, using HTTPS:443.
+    target_fqdns:
+      - amagent.azure.com
+      - dc.services.visualstudio.com
+      - global.handler.control.monitor.azure.com
+      - 'global.handler.control.monitor.azure.com:443'
+      - registry-1.docker.io
+      - auth.docker.io
+      - production.cloudflare.docker.com
+    protocol_port:
+      - Https:443
