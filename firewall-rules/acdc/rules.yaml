@@ -1,0 +1,13 @@
+landing_zone_id: acdc
+application_rules:
+  - description: Firewall rules for Azure Monitor Agent and Docker container registry access
+    comment: Includes endpoints for Azure Monitor Agent and Docker registry
+    target_fqdns:
+      - dc.services.visualstudio.com
+      - ods.opinsights.azure.com
+      - monitoringagent.blob.core.windows.net
+      - global.azure-devices-provisioning.net
+      - mcr.microsoft.com
+      - '*.data.mcr.microsoft.com'
+    protocol_port:
+      - Https:443
