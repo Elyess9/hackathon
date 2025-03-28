@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  yaml-formatter:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python -m uvicorn yaml_formatter:app --host 0.0.0.0 --port 3000 --reload
