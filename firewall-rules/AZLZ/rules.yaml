@@ -1,0 +1,13 @@
+landing_zone_id: AZLZ
+application_rules:
+  - description: Firewall rules for Azure Monitor Agent and Docker container registry access
+    comment: Includes endpoints for Azure Monitor Agent and Docker registry. All connections use HTTPS:443.
+    target_fqdns:
+      - dc.services.visualstudio.com
+      - ods.opinsights.azure.com
+      - global.handler.control.monitor.azure.com
+      - 'agentservice-prod-*.trafficmanager.net'
+      - mcr.microsoft.com
+      - '*.data.mcr.microsoft.com'
+    protocol_port:
+      - Https:443
